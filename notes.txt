@@ -1,0 +1,3 @@
+Le store c'est notre magasin d'Etat
+
+npm i @ngrx/store --save
