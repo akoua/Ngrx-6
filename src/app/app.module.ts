@@ -22,7 +22,7 @@ import { reducer } from './repo/state/repo.reducer';
       name: "ngrx_effects",
       maxAge: 14
     }),
-    EffectsModule,
+    EffectsModule.forRoot([]),
     RepoModule
   ],
   providers: [],
