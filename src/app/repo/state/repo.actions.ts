@@ -12,4 +12,4 @@ export class LoadClass implements Action {
 }
 
 //type
-export type RepoType = LoadClass;
+export type RepoActionType = LoadClass;

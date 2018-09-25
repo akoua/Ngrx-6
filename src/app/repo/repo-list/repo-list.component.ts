@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RepoService } from '../repo.service';
+import { Store } from '@ngrx/store';
+import { Repo } from '../../../model/repo.model';
+import { LoadClass } from '../state/repo.actions';
 
 @Component({
   selector: 'cc-repo-list',
@@ -8,10 +11,11 @@ import { RepoService } from '../repo.service';
 })
 export class RepoListComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private store: Store<Repo>) { }
 
   ngOnInit() {
-   
+    this.store.dispatch(new LoadClass());
   }
 
 }
