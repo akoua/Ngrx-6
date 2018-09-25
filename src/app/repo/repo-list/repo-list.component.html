@@ -1,3 +1,10 @@
-<p>
-  repo-list works!
-</p>
+<h3>Liste des repositories</h3>
+<div *ngIf="(repos$ | async)?.length" > <!-- cela nous permet de nous desabonner de l'Observable si plus de datas -->
+  <div *ngFor="let repo of (repos$ | async) ">  
+    {{repo.name}}
+  </div>
+</div>
+
+<div *ngIf="(dateTime$ | async)?.length">
+    {{dateTime}}
+</div>
